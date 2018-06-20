@@ -29,12 +29,108 @@
         android:layout_marginTop="40dp"
         android:text="Longitude:" />
 
+    <LinearLayout
+        android:id="@+id/NLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:text="Nouvelle position" />
+
+            <TextView
+                android:id="@+id/latitudeN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView3"
+                android:layout_below="@+id/textView3"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="32dp"
+                android:text="Latitude:" />
+
+            <TextView
+                android:id="@+id/longitudeN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/latitudeN"
+                android:layout_below="@+id/latitudeN"
+                android:layout_marginTop="32dp"
+                android:text="Longitude:" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/dista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/status"
+        android:layout_alignEnd="@+id/lat"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="29dp"
+        android:text="sdsfds" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dista"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        android:text="Status" />
+
+    <Button
+        android:id="@+id/obtenirPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/lo"
         android:layout_below="@+id/lo"
-        android:layout_marginTop="41dp" />
+        android:layout_marginTop="39dp"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="obtenirPosition"
+        android:text="Obtenir Position"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/obtenirPosition"
+        android:layout_alignBottom="@+id/obtenirPosition"
+        android:layout_marginStart="51dp"
+        android:layout_toEndOf="@+id/obtenirPosition"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="Arreter GPS"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:onClick="arreter"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_marginStart="51dp"
+        android:layout_toEndOf="@+id/button3"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="Redemarrer GPS"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:onClick="redemarrer"/>
 
 </RelativeLayout>
